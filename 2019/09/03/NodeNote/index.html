@@ -5,16 +5,19 @@
   
 
   
-  <title>newfile.md | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="newfile.md">
-<meta property="og:url" content="http://yoursite.com/2019/09/02/newfile-md/index.html">
+  <meta name="description" content="最简单文件读写 发起文件读写请求：var fs = require(‘fs’); 读文件：fs.readFile(文件路径，回调函数);回调函数如：function（error, date);如果文件读取错误则error非空，date为定义。否则相反。 写文件：fs.writeFile(文件路径，内容，回调函数);回调函数如：function（error);如果文件读取错误则error非空。  最">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/09/03/NodeNote/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="最简单文件读写 发起文件读写请求：var fs = require(‘fs’); 读文件：fs.readFile(文件路径，回调函数);回调函数如：function（error, date);如果文件读取错误则error非空，date为定义。否则相反。 写文件：fs.writeFile(文件路径，内容，回调函数);回调函数如：function（error);如果文件读取错误则error非空。  最">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-02T00:55:36.591Z">
+<meta property="og:updated_time" content="2019-09-03T07:44:32.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="newfile.md">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="最简单文件读写 发起文件读写请求：var fs = require(‘fs’); 读文件：fs.readFile(文件路径，回调函数);回调函数如：function（error, date);如果文件读取错误则error非空，date为定义。否则相反。 写文件：fs.writeFile(文件路径，内容，回调函数);回调函数如：function（error);如果文件读取错误则error非空。  最">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -61,33 +64,44 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-newfile-md" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-NodeNote" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/02/newfile-md/" class="article-date">
-  <time datetime="2019-09-02T00:55:36.000Z" itemprop="datePublished">2019-09-02</time>
+    <a href="/2019/09/03/NodeNote/" class="article-date">
+  <time datetime="2019-09-03T06:44:31.982Z" itemprop="datePublished">2019-09-03</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      newfile.md
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="最简单文件读写"><a href="#最简单文件读写" class="headerlink" title="最简单文件读写"></a>最简单文件读写</h1><ol>
+<li>发起文件读写请求：var fs = require(‘fs’);</li>
+<li>读文件：fs.readFile(文件路径，回调函数);<br>回调函数如：function（error, date);<br>如果文件读取错误则error非空，date为定义。否则相反。</li>
+<li>写文件：fs.writeFile(文件路径，内容，回调函数);<br>回调函数如：function（error);<br>如果文件读取错误则error非空。</li>
+</ol>
+<h1 id="最简单http服务"><a href="#最简单http服务" class="headerlink" title="最简单http服务"></a>最简单http服务</h1><h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><ol>
+<li>发起服务请求：var http = require(‘http’);    </li>
+<li>开启服务器：var server = http.createServer();</li>
+<li>响应处理函数：server.on(‘request’, 回调函数);</li>
+<li>绑定端口号，启动服务器：server.listen(端口号如3000), 回调函数)</li>
+</ol>
+<p><strong>ctrl+c关闭服务</strong></p>
+<h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><p>request 请求事件处理函数有两个参数</p>
+<ol>
+<li>请求对象Requset</li>
+<li>响应对象Reponse</li>
+</ol>
+<p><strong>server.on(‘request’, function(request, reponse){})</strong></p>
+<p>request.url 客户路径    （端口号之后的路径）</p>
+<p>reponse.write(响应内容)可有多个</p>
+<p>response.end()结束响应</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/02/newfile-md/" data-id="ck03iybkz0003fguixk7taae4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/03/NodeNote/" data-id="ck03iybkd0000fguicvo0745p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -96,19 +110,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/02/essay1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/09/02/essay1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>

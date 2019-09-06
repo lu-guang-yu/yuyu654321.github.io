@@ -62,6 +62,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-NodeNote" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/03/NodeNote/" class="article-date">
+  <time datetime="2019-09-03T06:44:31.982Z" itemprop="datePublished">2019-09-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="最简单文件读写"><a href="#最简单文件读写" class="headerlink" title="最简单文件读写"></a>最简单文件读写</h1><ol>
+<li>发起文件读写请求：var fs = require(‘fs’);</li>
+<li>读文件：fs.readFile(文件路径，回调函数);<br>回调函数如：function（error, date);<br>如果文件读取错误则error非空，date为定义。否则相反。</li>
+<li>写文件：fs.writeFile(文件路径，内容，回调函数);<br>回调函数如：function（error);<br>如果文件读取错误则error非空。</li>
+</ol>
+<h1 id="最简单http服务"><a href="#最简单http服务" class="headerlink" title="最简单http服务"></a>最简单http服务</h1><h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><ol>
+<li>发起服务请求：var http = require(‘http’);    </li>
+<li>开启服务器：var server = http.createServer();</li>
+<li>响应处理函数：server.on(‘request’, 回调函数);</li>
+<li>绑定端口号，启动服务器：server.listen(端口号如3000), 回调函数)</li>
+</ol>
+<p><strong>ctrl+c关闭服务</strong></p>
+<h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><p>request 请求事件处理函数有两个参数</p>
+<ol>
+<li>请求对象Requset</li>
+<li>响应对象Reponse</li>
+</ol>
+<p><strong>server.on(‘request’, function(request, reponse){})</strong></p>
+<p>request.url 客户路径    （端口号之后的路径）</p>
+<p>reponse.write(响应内容)可有多个</p>
+<p>response.end()结束响应</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/09/03/NodeNote/" data-id="ck03iybkd0000fguicvo0745p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-essay1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/02/essay1/" class="article-date">
@@ -140,7 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/02/essay1/" data-id="ck02fomlm00022oui18mte2gs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/02/essay1/" data-id="ck03iybkl0001fguis3zup8t2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -176,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/09/02/newfile-md/" data-id="ck02fomlj00012ouifgw9acwu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/09/02/newfile-md/" data-id="ck03iybkz0003fguixk7taae4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -225,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/31/hello-world/" data-id="ck02fomld00002ouil5y6xto4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/31/hello-world/" data-id="ck03iybko0002fguio0vd5pg5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -264,6 +311,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/09/03/NodeNote/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2019/09/02/essay1/">(no title)</a>
