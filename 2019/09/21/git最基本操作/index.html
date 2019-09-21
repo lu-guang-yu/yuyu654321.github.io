@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最简单文件读写 发起文件读写请求：var fs = require(‘fs’); 读文件：fs.readFile(文件路径，回调函数);回调函数如：function（error, date);如果文件读取错误则error非空，date为定义。否则相反。 写文件：fs.writeFile(文件路径，内容，回调函数);回调函数如：function（error);如果文件读取错误则error非空。  最">
+  <meta name="description" content="要想使用git,得在本地初始化一个本地仓库，可先建立一个新目录或在一个已存在的目录中输入如下命令，即可创建一个仓库。 git init 创建时会自动生成一个隐藏文件.git（包含各种配置）。 git最基本的三个区 workplace(工作区)：就是本地文件所在的目录。可直接对文件进行操作  index(缓存区）：介于工作区与本地仓库间，一个本地的缓存。  repository(仓库）： 分为loc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2019/09/03/NodeNote/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/09/21/git最基本操作/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="最简单文件读写 发起文件读写请求：var fs = require(‘fs’); 读文件：fs.readFile(文件路径，回调函数);回调函数如：function（error, date);如果文件读取错误则error非空，date为定义。否则相反。 写文件：fs.writeFile(文件路径，内容，回调函数);回调函数如：function（error);如果文件读取错误则error非空。  最">
+<meta property="og:description" content="要想使用git,得在本地初始化一个本地仓库，可先建立一个新目录或在一个已存在的目录中输入如下命令，即可创建一个仓库。 git init 创建时会自动生成一个隐藏文件.git（包含各种配置）。 git最基本的三个区 workplace(工作区)：就是本地文件所在的目录。可直接对文件进行操作  index(缓存区）：介于工作区与本地仓库间，一个本地的缓存。  repository(仓库）： 分为loc">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-03T07:44:32.391Z">
+<meta property="og:updated_time" content="2019-09-21T08:50:55.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="最简单文件读写 发起文件读写请求：var fs = require(‘fs’); 读文件：fs.readFile(文件路径，回调函数);回调函数如：function（error, date);如果文件读取错误则error非空，date为定义。否则相反。 写文件：fs.writeFile(文件路径，内容，回调函数);回调函数如：function（error);如果文件读取错误则error非空。  最">
+<meta name="twitter:description" content="要想使用git,得在本地初始化一个本地仓库，可先建立一个新目录或在一个已存在的目录中输入如下命令，即可创建一个仓库。 git init 创建时会自动生成一个隐藏文件.git（包含各种配置）。 git最基本的三个区 workplace(工作区)：就是本地文件所在的目录。可直接对文件进行操作  index(缓存区）：介于工作区与本地仓库间，一个本地的缓存。  repository(仓库）： 分为loc">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,33 +154,26 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-NodeNote" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git最基本操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="最简单文件读写"><a href="#最简单文件读写" class="headerlink" title="最简单文件读写"></a>最简单文件读写</h1><ol>
-<li>发起文件读写请求：var fs = require(‘fs’);</li>
-<li>读文件：fs.readFile(文件路径，回调函数);<br>回调函数如：function（error, date);<br>如果文件读取错误则error非空，date为定义。否则相反。</li>
-<li>写文件：fs.writeFile(文件路径，内容，回调函数);<br>回调函数如：function（error);<br>如果文件读取错误则error非空。</li>
+        <p>要想使用git,得在本地初始化一个本地仓库，可先建立一个新目录或在一个已存在的目录中输入如下命令，即可创建一个仓库。</p>
+<p><code>git init</code></p>
+<p>创建时会自动生成一个隐藏文件.git（包含各种配置）。</p>
+<h1 id="git最基本的三个区"><a href="#git最基本的三个区" class="headerlink" title="git最基本的三个区"></a>git最基本的三个区</h1><ol>
+<li><p>workplace(工作区)：就是本地文件所在的目录。可直接对文件进行操作</p>
+</li>
+<li><p>index(缓存区）：介于工作区与本地仓库间，一个本地的缓存。</p>
+</li>
+<li><p>repository(仓库）： 分为local repository(本地仓库）和remote respository(远程仓库）.本地仓库包含的是已提交上去的本地目录文件。远程仓库就是远端的本地仓库。</p>
+<h1 id="如何将文件提交到本地仓库"><a href="#如何将文件提交到本地仓库" class="headerlink" title="如何将文件提交到本地仓库"></a>如何将文件提交到本地仓库</h1><h2 id="先将工作区的文件提交到缓存区"><a href="#先将工作区的文件提交到缓存区" class="headerlink" title="先将工作区的文件提交到缓存区"></a>先将工作区的文件提交到缓存区</h2><p> <code>git add 文件名</code> 提交一个工作区指定文件到缓存区。</p>
+<p> <code>git add 文件名1 文件名2 ...</code> 提交多个工作区指定文件到缓存区。</p>
+<p> <code>git add *</code> 提交工作区所有文件到缓存区。</p>
+</li>
 </ol>
-<h1 id="最简单http服务"><a href="#最简单http服务" class="headerlink" title="最简单http服务"></a>最简单http服务</h1><h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><ol>
-<li>发起服务请求：var http = require(‘http’);    </li>
-<li>开启服务器：var server = http.createServer();</li>
-<li>响应处理函数：server.on(‘request’, 回调函数);</li>
-<li>绑定端口号，启动服务器：server.listen(端口号如3000), 回调函数)</li>
-</ol>
-<p><strong>ctrl+c关闭服务</strong></p>
-<h2 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h2><p>request 请求事件处理函数有两个参数</p>
-<ol>
-<li>请求对象Requset</li>
-<li>响应对象Reponse</li>
-</ol>
-<p><strong>server.on(‘request’, function(request, reponse){})</strong></p>
-<p>request.url 客户路径    （端口号之后的路径）</p>
-<p>reponse.write(响应内容)可有多个</p>
-<p>response.end()结束响应</p>
-
+<h2 id="再将缓存区的文件提交到本地仓库"><a href="#再将缓存区的文件提交到本地仓库" class="headerlink" title="再将缓存区的文件提交到本地仓库"></a>再将缓存区的文件提交到本地仓库</h2><pre><code>`git commit -m &quot;代码提交信息&quot;`</code></pre>
       
 
       
@@ -259,7 +252,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/03/NodeNote/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/21/git最基本操作/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,18 +266,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/21/git最基本操作/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/09/03/NodeNote/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
   
